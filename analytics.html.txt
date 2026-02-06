@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Analytics</h1>
+<a href="index.html">← Back to Journal</a>
+
+<!-- SUMMARY STATS -->
+<div class="stats">
+  <div class="stat-box">
+    <h3>Total Trades</h3>
+    <p id="totalTrades">0</p>
+  </div>
+  <div class="stat-box">
+    <h3>Win Rate</h3>
+    <p id="winRate">0%</p>
+  </div>
+  <div class="stat-box">
+    <h3>Expectancy</h3>
+    <p id="expectancy">0R</p>
+  </div>
+  <div class="stat-box">
+    <h3>Profit Factor</h3>
+    <p id="profitFactor">0</p>
+  </div>
+  <div class="stat-box">
+    <h3>Avg Win</h3>
+    <p id="avgWin">0R</p>
+  </div>
+  <div class="stat-box">
+    <h3>Avg Loss</h3>
+    <p id="avgLoss">0R</p>
+  </div>
+</div>
+
+<!-- EQUITY CURVE -->
+<h2>R-Multiple Equity Curve</h2>
+<canvas id="equityChart"></canvas>
+
+<script src="analytics.js"></script>
+</body>
+</html>
