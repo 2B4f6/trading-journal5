@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Journal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Trading Journal</h1>
+
+<a href="analytics.html">Go to Analytics</a>
+
+<form id="trade-form">
+  <input type="number" step="0.01" name="profitLoss" placeholder="Profit / Loss" required>
+  <input type="number" step="0.01" name="dailyGain" placeholder="Daily Gain">
+  <input type="text" name="strategy" placeholder="Strategy">
+  <input type="number" step="0.01" name="risk" placeholder="Risk ($)">
+  <input type="text" name="platform" placeholder="Platform">
+  <input type="number" step="0.01" name="accountBalance" placeholder="Account Balance">
+
+  <label>Confidence
+    <input type="range" name="confidence" min="1" max="10" value="5" id="confidence">
+    <span id="confidenceVal">5</span>
+  </label>
+
+  <label>Emotion
+    <input type="range" name="emotion" min="1" max="10" value="5">
+  </label>
+
+  <input type="file" name="screenshot" accept="image/*">
+
+  <button type="submit">Add Trade</button>
+</form>
+
+<table id="trades-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>P/L</th>
+      <th>Balance</th>
+      <th>P/L %</th>
+      <th>Risk</th>
+      <th>Strategy</th>
+      <th>Platform</th>
+      <th>Confidence</th>
+      <th>Emotion</th>
+      <th>Screenshot</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<canvas id="equityChart"></canvas>
+
+<div class="pie-section">
+  <canvas id="riskRewardPie"></canvas>
+  <canvas id="plPie"></canvas>
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
